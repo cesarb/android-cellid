@@ -65,16 +65,21 @@ public class MainActivity extends Activity {
 
 	private void updateCellLocation(CellLocation location) {
 		GsmCellLocation gsmLocation = gsmCellLocation(location);
+
 		setText(R.id.lac, R.string.lac,
 				gsmLocation != null ? gsmLocation.getLac() : -1);
+		setText(R.id.rnc, R.string.rnc,
+				gsmLocation != null ? gsmLocation.getCid() >> 16 : -1);
 		setText(R.id.cid, R.string.cid,
-				gsmLocation != null ? gsmLocation.getCid() : -1);
-		setText(R.id.psc, R.string.psc,
-				gsmLocation != null ? gsmLocation.getPsc() : -1);
+				gsmLocation != null ? gsmLocation.getCid() & 0xffff : -1);
 	}
 
 	private void updateServiceState(String operator) {
-		setText(R.id.mcc_mnc, R.string.mcc_mnc, operator);
+		String mcc = operator.length() >= 3 ? operator.substring(0, 3) : "";
+		String mnc = operator.length() >= 3 ? operator.substring(3) : "";
+
+		setText(R.id.mcc, R.string.mcc, mcc);
+		setText(R.id.mnc, R.string.mnc, mnc);
 	}
 
 	private void setText(int id, int label, String string) {
