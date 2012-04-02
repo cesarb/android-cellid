@@ -4,10 +4,30 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Hello World, MainActivity"
-    />
+
+    <TextView
+        android:id="@+id/mcc_mnc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mcc_mnc" />
+
+    <TextView
+        android:id="@+id/lac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lac" />
+
+    <TextView
+        android:id="@+id/cid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cid" />
+
+    <TextView
+        android:id="@+id/psc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/psc" />
+
 </LinearLayout>
 
