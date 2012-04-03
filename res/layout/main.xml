@@ -7,31 +7,31 @@
 
     <TextView
         android:id="@+id/mcc"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/mcc" />
 
     <TextView
         android:id="@+id/mnc"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/mnc" />
 
     <TextView
         android:id="@+id/lac"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/lac" />
 
     <TextView
         android:id="@+id/rnc"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/rnc" />
 
     <TextView
         android:id="@+id/cid"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/cid" />
 
