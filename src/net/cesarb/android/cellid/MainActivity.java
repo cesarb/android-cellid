@@ -39,17 +39,18 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-
-		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-		telephonyManager.listen(listener, CellStateListener.LISTEN_NONE);
+		listen(CellStateListener.LISTEN_NONE);
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
+		listen(CellStateListener.EVENTS);
+	}
 
+	private void listen(int events) {
 		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-		telephonyManager.listen(listener, CellStateListener.EVENTS);
+		telephonyManager.listen(listener, events);
 	}
 
 	private static GsmCellLocation gsmCellLocation(CellLocation location) {
