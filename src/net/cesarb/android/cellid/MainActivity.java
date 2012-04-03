@@ -50,9 +50,6 @@ public class MainActivity extends Activity {
 
 		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
 		telephonyManager.listen(listener, CellStateListener.EVENTS);
-
-		updateServiceState(telephonyManager.getNetworkOperator());
-		updateCellLocation(telephonyManager.getCellLocation());
 	}
 
 	private static GsmCellLocation gsmCellLocation(CellLocation location) {
