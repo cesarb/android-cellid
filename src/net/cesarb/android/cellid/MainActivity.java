@@ -38,10 +38,10 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onPause() {
+		super.onPause();
+
 		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
 		telephonyManager.listen(listener, CellStateListener.LISTEN_NONE);
-
-		super.onPause();
 	}
 
 	@Override
