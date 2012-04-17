@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	private void updateCellLocation(CellLocation location) {
+	void updateCellLocation(CellLocation location) {
 		GsmCellLocation gsmLocation = gsmCellLocation(location);
 		int lac = gsmLocation != null ? gsmLocation.getLac() : -1;
 		int cid = gsmLocation != null ? gsmLocation.getCid() : -1;
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
 		setText(R.id.cid, R.string.cid, cid >= 0 ? cid & 0xffff : -1);
 	}
 
-	private void updateServiceState(String operator) {
+	void updateServiceState(String operator) {
 		String mcc = operator != null && operator.length() >= 3 ? operator
 				.substring(0, 3) : "";
 		String mnc = operator != null && operator.length() >= 3 ? operator
